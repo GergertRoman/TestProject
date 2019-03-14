@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:background">@color/colorBlack</item>
+        <item name="android:navigationBarColor">@color/colorDarkOrange</item>
+        <item name="titleTextColor">@color/colorDarkOrange</item>
+        <item name="android:textColorPrimary">@color/colorDarkOrange</item>
+        <item name="android:textColorSecondary">@color/colorDarkOrange</item>
+        <item name="android:textColorHint">@color/colorSilver</item>
+        <item name="android:hint">@string/where</item>
+    </style>
+</resources>

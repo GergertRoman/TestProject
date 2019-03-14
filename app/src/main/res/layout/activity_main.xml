@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/flMainView"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/colorSilver"
+             tools:context=".MainActivity">
+
+    <include android:id="@+id/toolbar"
+             layout="@layout/toolbar"
+             app:layout_constraintTop_toTopOf="@+id/flMainView"/>
+
+    <Button android:id="@+id/bButton"
+            android:layout_width="@dimen/widthBtn"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorDarkOrange"
+            android:text="@string/saveBtn"
+            android:textSize="@dimen/textBtnSize"
+            app:layout_constraintBottom_toBottomOf="@+id/flMainView"
+            app:layout_constraintStart_toEndOf="@+id/flMainView"
+            app:layout_constraintEnd_toStartOf="@+id/flMainView"/>
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintStart_toEndOf="@+id/flMainView"
+            app:layout_constraintEnd_toStartOf="@+id/flMainView">
+
+        <TextView
+                android:id="@+id/tvWhere"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/where"
+                android:textSize="@dimen/textSize"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="@dimen/indent">
+        </TextView>
+
+        <ImageView
+                android:id="@+id/ivWhereArow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorDarkOrange"
+                android:layout_toEndOf="@+id/tvWhere"
+                android:src="@drawable/baseline_arrow_forward_black_18dp"
+                android:scaleType="fitStart">
+        </ImageView>
+
+        <RelativeLayout
+                android:id="@+id/rlWhereLoyaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvWhere">
+
+            <View
+                    android:id="@+id/vWhereView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightViewInRl"
+                    android:background="@android:color/white">
+            </View>
+
+            <ImageView
+                    android:id="@+id/ivWhereAdd"
+                    android:layout_width="@dimen/ivAdd"
+                    android:layout_height="@dimen/ivAdd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/colorDarkOrange"
+                    android:src="@drawable/baseline_add_box_black_36dp">
+            </ImageView>
+
+        </RelativeLayout>
+
+        <TextView
+                android:id="@+id/tvHither"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/hither"
+                android:textSize="@dimen/textSize"
+                android:textColor="@android:color/black"
+                android:layout_below="@+id/rlWhereLoyaut"
+                android:layout_marginStart="@dimen/indent">
+        </TextView>
+
+        <ImageView
+                android:id="@+id/ivHitherArow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@color/colorDarkOrange"
+                android:layout_toEndOf="@+id/tvHither"
+                android:layout_below="@+id/rlWhereLoyaut"
+                android:rotation="180"
+                android:src="@drawable/baseline_arrow_forward_black_18dp"
+                android:scaleType="fitStart">
+        </ImageView>
+
+        <RelativeLayout
+                android:id="@+id/rlHitherLoyaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHither">
+
+            <View
+                    android:id="@+id/vHitherView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/heightViewInRl"
+                    android:background="@color/colorWhite">
+            </View>
+
+            <ImageView
+                    android:id="@+id/ivHitherAdd"
+                    android:layout_width="@dimen/ivAdd"
+                    android:layout_height="@dimen/ivAdd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/colorDarkOrange"
+                    android:src="@drawable/baseline_add_box_black_36dp">
+            </ImageView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
